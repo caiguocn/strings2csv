@@ -120,9 +120,9 @@ def generateArrayRows(name, stringAttrs):
         is empty, For example:
 
         [
-            ['string-array(arrays)', 'array1', '数组1'],
-            ['', 'array2', '数组2'],
-            ['string-array(arrays)', 'array3', '数组3'],
+            ['string-array(arrays)' , 'array1' , '数组1'] ,
+            [''                     , 'array2' , '数组2'] ,
+            ['string-array(arrays)' , 'array3' , '数组3'] ,
         ]"""
     rows = []
     row = [name,]
@@ -163,9 +163,9 @@ def generateRows(name, stringAttrs):
 
         string-array:
             [
-                ['string-array(arrays)', 'array1', '数组1'],
-                ['', 'array2', '数组2'],
-                ['string-array(arrays)', 'array3', '数组3'],
+                ['string-array(arrays)' , 'array1' , '数组1'] ,
+                [''                     , 'array2' , '数组2'] ,
+                ['string-array(arrays)' , 'array3' , '数组3'] ,
             ]"""
     row = [name,]
     for stringAttr in stringAttrs:
