@@ -1,7 +1,7 @@
 strings2csv
 ===========
 
-A tool Convert all android strings.xml files in the res folder to a *.csv file
+A tool to convert all android strings.xml files in the res folder to a *.csv file.
 
 Usage
 ===========
