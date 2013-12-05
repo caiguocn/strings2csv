@@ -40,9 +40,11 @@ def parseStrings(stringPath):
         if object is string, the value is a str,
         else if object is string-array, the value is a list. For example:
 
-        {'install': 'install',
-        'uninstall': 'uninsatll',
-        'arrays': ['array1', 'array2']}"""
+        {
+            'install'  : 'install',
+            'uninstall' : 'uninsatll',
+            'arrays'    : ['array1', 'array2']
+        }"""
     xmldoc = minidom.parse(stringPath)
     strElements = xmldoc.getElementsByTagName('string')
     strArrayElements = xmldoc.getElementsByTagName('string-array')
@@ -83,9 +85,9 @@ def parseLanguage(valuePath):
     Returns:
         A language str, For example:
 
-        values -- >
-        values-zh-rCN --> zh-rCN
-        values-en --> en"""
+        values        -- >
+        values-zh-rCN -- > zh-rCN
+        values-en     -- > en"""
     reLanguage = re.compile(r'values-(\S+)$')
     m = reLanguage.search(valuePath)
     return m and m.group(1) or ''
@@ -120,9 +122,10 @@ def generateArrayRows(name, stringAttrs):
         is empty, For example:
 
         [
-            ['string-array(arrays)' , 'array1' , '数组1'] ,
-            [''                     , 'array2' , '数组2'] ,
-            ['string-array(arrays)' , 'array3' , '数组3'] ,
+            ['string-array(arrays)' , 'item1' , '项目1'] ,
+            [''                     , 'item2' , '项目2'] ,
+            [''                     , 'item3' , '项目3'] ,
+            ['string-array(arrays)' , 'item4' , '项目4'] ,
         ]"""
     rows = []
     row = [name,]
@@ -163,9 +166,10 @@ def generateRows(name, stringAttrs):
 
         string-array:
             [
-                ['string-array(arrays)' , 'array1' , '数组1'] ,
-                [''                     , 'array2' , '数组2'] ,
-                ['string-array(arrays)' , 'array3' , '数组3'] ,
+                ['string-array(arrays)' , 'item1' , '项目1'] ,
+                [''                     , 'item2' , '项目2'] ,
+                [''                     , 'item3' , '项目3'] ,
+                ['string-array(arrays)' , 'item4' , '项目4'] ,
             ]"""
     row = [name,]
     for stringAttr in stringAttrs:
