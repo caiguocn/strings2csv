@@ -320,7 +320,7 @@ def main(argv):
     resPath = getResPath(apkPath)
     if not resPath:
         print "No res or values directory in '%s'" % apkPath
-        print "You can use commond like:'./string2csv.py -s ApkDir'."
+        print "You can use commond like:'./string2csv.py -s ApkSourcePath'."
         sys.exit()
 
     stringAttrs = getStringAttrs(resPath)
