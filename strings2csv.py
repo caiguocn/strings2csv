@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #title       :strings2csv.py
 #author      :yejinbing
-#date        :20131003
+#date        :20131203
 #description :find all strings.xml, then write the string or string-array
 #             attrs to a csv file
 
