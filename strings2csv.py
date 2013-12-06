@@ -41,7 +41,7 @@ def parseStrings(stringPath):
         else if object is string-array, the value is a list. For example:
 
         {
-            'install'  : 'install',
+            'install'   : 'install',
             'uninstall' : 'uninsatll',
             'arrays'    : ['array1', 'array2']
         }"""
@@ -122,10 +122,10 @@ def generateArrayRows(name, stringAttrs):
         is empty, For example:
 
         [
-            ['string-array(arrays)' , 'item1' , '项目1'] ,
-            [''                     , 'item2' , '项目2'] ,
-            [''                     , 'item3' , '项目3'] ,
-            ['string-array(arrays)' , 'item4' , '项目4'] ,
+            ['string-array(arrays)', 'item1', '项目1'],
+            [''                    , 'item2', '项目2'],
+            [''                    , 'item3', '项目3'],
+            ['string-array(arrays)', 'item4', '项目4'],
         ]"""
     rows = []
     row = [name,]
@@ -166,10 +166,10 @@ def generateRows(name, stringAttrs):
 
         string-array:
             [
-                ['string-array(arrays)' , 'item1' , '项目1'] ,
-                [''                     , 'item2' , '项目2'] ,
-                [''                     , 'item3' , '项目3'] ,
-                ['string-array(arrays)' , 'item4' , '项目4'] ,
+                ['string-array(arrays)', 'item1', '项目1'],
+                [''                    , 'item2', '项目2'],
+                [''                    , 'item3', '项目3'],
+                ['string-array(arrays)', 'item4', '项目4'],
             ]"""
     row = [name,]
     for stringAttr in stringAttrs:
