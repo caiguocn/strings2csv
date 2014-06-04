@@ -197,6 +197,8 @@ def saveAsCsv(names, stringAttrs, csvFile):
     Returns:
         None"""
     writer = csv.writer(csvFile)
+    import codecs
+    csvFile.write(codecs.BOM_UTF8)
     stringAttrs.sort(cmp=lambda x,y:cmp(x.language,y.language))
     #if language is empty, use 'default'
     langs = map(lambda x: x.language or 'default', stringAttrs)
